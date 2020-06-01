@@ -16,4 +16,10 @@ function reverseLettersAndAdd(letters, userSentence) {
   insertLetter(userSentence, combinedSentence)
 }
 
+function insertLetter(userSentence, combinedSentence) {
+  const letterToRemove = parseInt(userSentence.length / 2)
+  const result = userSentence.slice(letterToRemove, letterToRemove + 1) + combinedSentence;
+  console.log(result)
+}
+
 getUserInput();
