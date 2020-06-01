@@ -5,10 +5,15 @@ function getUserInput() {
 }
 
 function capitalizeFirstAndLastLetter(userSentence) {
-  const firstLetter = userSentence.substring(0, 1);
-  const lastLetter = userSentence.substring(-1);
-  const firstAndLastLetter = firstLetter + lastLetter;
-  console.log(firstAndLastLetter);
+  let firstAndLastLetter = userSentence.substring(0, 1) + userSentence.slice(-1);
+  console.log(firstAndLastLetter.toUpperCase())
+  reverseLettersAndAdd(firstAndLastLetter.toUpperCase(), userSentence);
+}
+
+function reverseLettersAndAdd(letters, userSentence) {
+  const combinedSentence = userSentence + (letters.split("").reverse().join(""));
+  console.log(combinedSentence)
+  insertLetter(userSentence, combinedSentence)
 }
 
 getUserInput();
