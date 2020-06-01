@@ -30,3 +30,10 @@ getUserInput();
 
 console.log(userSentence);
 console.log(cipherSentence);
+
+$(document).ready(function(){
+  $("p#sentence2").click(function() {
+    $("p#sentence2").replaceWith(`<p id="sentence2">${cipherSentence}</p>`)
+    $("p#sentence1").replaceWith(`<p id="sentence1">This is sentence one.</p>`)
+  });
+});
