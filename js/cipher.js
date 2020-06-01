@@ -7,7 +7,7 @@ function getUserInput() {
 }
 
 function capitalizeFirstAndLastLetter(userSentence) {
-  const firstAndLastLetter = userSentence.substring(0, 1) + userSentence.slice(-1);
+  const firstAndLastLetter = userSentence.charAt(0) + userSentence.charAt(userSentence.length - 1);
   reverseLettersAndAdd(firstAndLastLetter.toUpperCase(), userSentence);
 }
 
@@ -18,7 +18,7 @@ function reverseLettersAndAdd(letters, userSentence) {
 
 function insertLetter(userSentence, combinedSentence) {
   const letterToRemove = Math.floor((userSentence.length / 2))
-  const result = userSentence.slice(letterToRemove, letterToRemove + 1) + combinedSentence;
+  const result = userSentence.charAt(letterToRemove) + combinedSentence;
   reverseCipherSentence(result);
 }
 
